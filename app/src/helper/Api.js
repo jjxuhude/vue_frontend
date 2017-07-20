@@ -10,6 +10,7 @@ const Api={
                     });
                 },
                 post(url,params){
+                    Nprogress.start();
                     return new Promise((resolve,reject)=>{
                         axios.post(url,params)
                             .then(response=>{
@@ -22,9 +23,14 @@ const Api={
                                 }else{
                                     resolve(response)
                                 }
+                                Nprogress.done();
 
                             })
-                            .catch(response=>reject(response));
+                            .catch(response=>{
+                                Nprogress.done();
+                                reject(response)
+
+                            });
                     });
                 },
                 resetCommonData(data) {
