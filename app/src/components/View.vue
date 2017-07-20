@@ -2,12 +2,10 @@
 
     <div>
         <h3>View</h3>
-        <ol v-if="items.length>0">
-            <li v-for="item in items" >{{item.id}} {{item.name}} {{ item.password }}</li>
-        </ol>
-        <div v-else="">
-            <p>code:{{error.code}} message:{{error.message}}</p>
+        <div>
+            {{params}}
         </div>
+
     </div>
 </template>
 
@@ -16,30 +14,16 @@
     export default {
         data(){
             return {
-                items:[],
-                error:{
-                    code:'',
-                    message:''
-                },
-                currentUser:Lockr.get('userInfo')
-
+                params:{}
             }
         },
         methods: {
-            list(){
-                this.api.post('Vue').then(response=>{
-                    if(response.data.error==true){
-                        this.error.code=response.data.code;
-                        this.error.message=response.data.message;
-                    }else {
-                        this.items=response.data;
-                    }
-                })
-            }
+
         },
         created:function (){
-            this.list();
+            this.params=this.$route.params;
         },
+
         mixins:[Api]
 
     }

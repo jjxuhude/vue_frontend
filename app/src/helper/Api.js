@@ -50,11 +50,13 @@ const Api={
 
     methods:{
 
-
-
-
     },
 
+    watch: {
+        '$route'(to,from){
+            this.params=this.$route.params;
+        }
+    },
 
 }
 

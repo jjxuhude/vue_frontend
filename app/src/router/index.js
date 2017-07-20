@@ -21,7 +21,7 @@ export default new Router({
       component: List
     },
       {
-          path:'/view',
+          path:'/view/:catalogId/:productId',
           name:'view',
           component:View
       }

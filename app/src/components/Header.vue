@@ -3,7 +3,8 @@
     <div class="links">
         <ul class="list-unstyled pull-left">
             <li> <router-link to="/list">list</router-link> </li>
-            <li> <router-link to="/view">view</router-link> </li>
+            <li> <router-link to="/view/2/123">view:/view/2/123</router-link> </li>
+            <li> <router-link to="/view/4/456">view:/view/4/456</router-link> </li>
 
         </ul>
 
