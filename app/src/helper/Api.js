@@ -36,6 +36,7 @@ const Api={
                 resetCommonData(data) {
                     Lockr.set('user', data.user)
                     Lockr.set('session_id', data.session_id)
+                    axios.defaults.headers.session_id = data.session_id;
                     Lockr.set('time', data.time)
                     var gc_maxlifetime=data.gc_maxlifetime?data.gc_maxlifetime:1800;
                     var date=new Date();date.setTime(date.getTime()+1800*1000);

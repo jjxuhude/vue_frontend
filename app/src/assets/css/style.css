@@ -1,21 +1,76 @@
+* {
+  font: 12px/1.5em Arial, Helvetica, sans-serif;
+}
+a {
+  text-decoration: none;
+  outline: 0;
+}
+a:hover {
+  text-decoration: none;
+  outline: 0;
+}
+a:focus {
+  text-decoration: none;
+  outline: 0;
+}
+ul {
+  list-style: none;
+}
 .header {
-  height: 80px;
+  height: 90px;
 }
-.header .links ul {
-  float: right;
-  margin-right: 30px;
-  margin-top: 20px;
+.header .title {
+  background: url(../images/admin/header_top_bg.gif);
+  padding: 20px 40px 0 40px;
 }
-.header .links ul li {
+.header .title .logo > img {
+  margin-top: -10px;
+}
+.header .title .links {
+  color: #fff;
+}
+.header .title .links b {
+  cursor: pointer;
+}
+.header .title .links li {
   float: left;
-  border-right: 1px solid #ccc;
-  padding: 0 10px;
+  padding-right: 10px;
 }
-.header .links ul li:last-child {
-  border: none;
+.header .menu {
+  background: url(../images/admin/nav1_bg.gif) repeat-x 0 100% #666e73;
+}
+.header .menu ul.nav-box {
+  padding-left: 20px;
+}
+.header .menu ul.nav-box a {
+  display: inline-block;
+}
+.header .menu ul.nav-box li.level0 {
+  position: relative;
+  float: left;
+}
+.header .menu ul.nav-box li.level0 a {
+  color: #fff;
+  background: url(../images/admin/nav1_sep.gif) no-repeat right top;
+  height: 30px;
+  padding: 5px 20px;
+}
+.header .menu ul.nav-box li.level0 ul {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #e7efef;
+  padding: 0;
+  border: 1px solid #2d444f;
+}
+.header .menu ul.nav-box li.level0 ul li a {
+  width: 250px;
+  color: #000;
+  text-align: left;
+  padding-left: 60px;
 }
 .footer {
-  height: 80px;
+  height: 90px;
 }
 .main-body .main .login-block {
   position: absolute;
