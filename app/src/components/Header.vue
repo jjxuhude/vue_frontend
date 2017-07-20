@@ -38,8 +38,6 @@
           myAttr:'动态属性',
           text:'header',
           date:(new Date()).toLocaleDateString(),
-
-
         }
       },
 
@@ -66,6 +64,15 @@
               return this.$store.state.currentUser;
           },
       },
+      mounted(){
+        $('li.parent').hover(function (){
+            $(this).find('ul').show();
+        },function(){
+          $(this).find('ul').hide();
+        });
+      },
+
+
 
       mixins:[Api]
 

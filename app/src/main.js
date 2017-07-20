@@ -34,6 +34,7 @@ window.Lockr=Lockr
 window._=_
 window.Cookies=Cookies
 window.Nprogress=Nprogress
+window.$=jQuery
 
 
 jQuery(document).ajaxSend(function() {

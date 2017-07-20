@@ -46,7 +46,8 @@ ul{
       padding-left: 20px;
       li.level0{position: relative;
         float:left;
-        a{color:#fff;background:url(../images/admin/nav1_sep.gif) no-repeat right top;
+        >a{color:#fff;background:url(../images/admin/nav1_sep.gif) no-repeat right top;}
+        a{
           height: 30px;
           padding:5px 20px;
         }
@@ -58,11 +59,15 @@ ul{
           padding: 0;
           border: 1px solid #2d444f;
           li{
+            border-bottom: 1px solid #2d444f;
             a{
               width:250px;
               color:#000;
               text-align: left;
               padding-left:60px;
+            }
+            &:last-child{
+              border-bottom: none;
             }
           }
         }
