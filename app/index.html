@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>app</title>
+</head>
+<body>
+<div id="app">
+
+
+    <jj_layout>
+        <div slot="header"><header_block></header_block></div>
+        <div class="main-body" style="">
+
+            <div class="container">
+                <div class="row">
+                    <div class="main" style="text-align: center ">
+                        <!--<router-link to="/" >home</router-link>-->
+                        <!--<router-link to="/list" >list</router-link>-->
+                        <router-view></router-view>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <div slot="footer">footer</div>
+    </jj_layout>
+
+</div>
+<!-- built files will be auto injected -->
+</body>
+</html>
