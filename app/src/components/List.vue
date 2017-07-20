@@ -13,6 +13,7 @@
 
 <script>
     import Api from '../helper/Api'
+    import Base from './Base.vue'
     export default {
         data(){
             return {
@@ -36,10 +37,13 @@
                 })
             }
         },
-        created:function (){
+        created(){
+            console.log('list');
             this.list();
         },
-        mixins:[Api]
+        mixins:[Api],
+        extends:Base,
+
 
     }
 </script>

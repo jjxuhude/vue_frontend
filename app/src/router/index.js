@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Hello from '@/components/Hello'
 import List from '@/components/List'
 import View from '@/components/View'
+import Child1 from '@/components/View/Child1'
 
 
 Vue.use(Router)
@@ -22,8 +23,11 @@ export default new Router({
     },
       {
           path:'/view/:catalogId/:productId',
-          name:'view',
-          component:View
+          component:View,
+          name: 'view',
+          children:[
+              {path:'child1',component:Child1},
+          ]
       }
 
   ]

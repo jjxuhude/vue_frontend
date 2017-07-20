@@ -4,7 +4,10 @@
         <ul class="list-unstyled pull-left">
             <li> <router-link to="/list">list</router-link> </li>
             <li> <router-link to="/view/2/123">view:/view/2/123</router-link> </li>
-            <li> <router-link to="/view/4/456">view:/view/4/456</router-link> </li>
+            <li> <router-link to="/view/4/456/child1">view:/view/4/456/child1</router-link> </li>
+            <li><span @click="routerPush">router.push()</span></li>
+            <li>{{myname}}</li>
+
 
         </ul>
 
@@ -28,7 +31,7 @@
 
     export default  {
       name: 'home-header',
-
+      props: ['myname'],
       data () {
         return {
           myAttr:'动态属性',
@@ -40,7 +43,7 @@
       },
 
       methods: {
-        logout:function () {
+          logout:function () {
             Lockr.flush();
             this.api.post('Public/logout').then(response=>{
                 if(response.status==200 && response.data.status==false){
@@ -49,8 +52,12 @@
                     router.push('/');
                 }
             })
+          },
 
-        },
+          routerPush(){
+              this.$router.push({name: 'view',params:{catalogId:222,productId:444}});
+          },
+
       },
 
       computed: {

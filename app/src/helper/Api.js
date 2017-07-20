@@ -54,9 +54,14 @@ const Api={
 
     watch: {
         '$route'(to,from){
+            //this.$router.push('/list')
             this.params=this.$route.params;
         }
     },
+
+    created(){
+        console.log('api');
+    }
 
 }
 

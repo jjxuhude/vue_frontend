@@ -4,6 +4,7 @@
         <h3>View</h3>
         <div>
             {{params}}
+            <router-view></router-view>
         </div>
 
     </div>
