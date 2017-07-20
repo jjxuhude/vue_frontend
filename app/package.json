@@ -19,6 +19,7 @@
     "jquery": "^3.2.1",
     "js-cookie": "^2.1.4",
     "lockr": "^0.8.4",
+    "nprogress": "^0.2.0",
     "underscore": "^1.8.3",
     "vue": "^2.3.3",
     "vue-router": "^2.3.1",
