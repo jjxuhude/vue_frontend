@@ -13,6 +13,9 @@ import Lockr from 'lockr'
 import _ from 'underscore'
 import store from './vuex/store'
 import Cookies from 'js-cookie'
+import Nprogress from 'nprogress'
+import 'nprogress/nprogress.css'
+import jQuery from 'jquery'
 
 
 
@@ -30,15 +33,23 @@ window.axios=axios
 window.Lockr=Lockr
 window._=_
 window.Cookies=Cookies
+window.Nprogress=Nprogress
 
 
-
+jQuery(document).ajaxSend(function() {
+    Nprogress.start();
+});
+jQuery(document).ajaxComplete(function() {
+    Nprogress.done();
+});
 
 
 Vue.config.productionTip = false
 
 router.beforeEach((to, from, next) => {
+  Nprogress.start();
   if(Cookies.get('user')){
+
       store.dispatch('setCurrentUser',JSON.parse(Cookies.get('user')));
   }
 
@@ -48,6 +59,7 @@ router.afterEach(route => {
     if(!Cookies.get('user') || !Cookies.get('session_id')){
         router.push('/');
     }
+    Nprogress.done();
 })
 
 
