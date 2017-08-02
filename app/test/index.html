@@ -11,8 +11,35 @@
     <script src="../node_modules/bootstrap/dist/js/bootstrap.js"></script>
 </head>
 <body>
-    <div class="container list-unstyled ">
+    <style>
+        .wrap{
+            height: 500px;
+            background: #ccc;
+            display: flex;
+            flex-direction: row;
+            align-items: flex-end;
+            justify-content: center;
+        }
+        .item{
+            flex:1 1 20%;
+            padding-right: 10px;
+            border:1px solid red;
+            text-align: center;
+        }
 
-    </div>
+
+    </style>
+   <div class="container">
+       <div class="row">
+           <div class="wrap">
+               <div class="item item1">111</div>
+               <div class="item item2">222</div>
+               <div class="item item3">333</div>
+               <div class="item item4"></div>
+               <div class="item item5">555</div>
+               <div class="item item6">666</div>
+           </div>
+       </div>
+   </div>
 </body>
 </html>
