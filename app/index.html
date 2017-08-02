@@ -9,25 +9,32 @@
 
 
     <jj_layout>
+        <div slot="header"><header_block myname="徐华德"></header_block></div>
+        <div class="main-body" style="">
 
-        <div slot="header">
-            <header_block myname="徐华德"></header_block>
-        </div>
-
-        <div class="main-body">
             <div class="container">
                 <div class="row">
                     <div class="main" style="text-align: center ">
+                        <!--<router-link to="/" >home</router-link>-->
+                        <!--<router-link to="/list" >list</router-link>-->
                         <router-view></router-view>
                     </div>
                 </div>
             </div>
+
+
         </div>
-
-        <div slot="footer">footer</div>
-
+        <div slot="footer">
+            <ul>
+                <li><router-link to="/list">list</router-link></li>
+                <li><router-link to="/view/111/222">view</router-link></li>
+                <li><router-link to="/view/111/222/child1">view child1</router-link></li>
+                <li><router-link to="/increment">increment</router-link></li>
+            </ul>
+        </div>
     </jj_layout>
 
 </div>
+<!-- built files will be auto injected -->
 </body>
 </html>

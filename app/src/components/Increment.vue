@@ -1,5 +1,6 @@
 <template>
-    <button v-on:click="increment()" >{{ counter }} - {{ attr }}</button>
+    <button v-on:click="increment()" >{{ counter }}</button>
+
 </template>
 
 <script>
