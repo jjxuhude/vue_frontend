@@ -1,5 +1,9 @@
 <template>
+    <div>
+
     <button v-on:click="increment()" >{{ counter }}</button>
+    <li v-for="n in evenNumbers">{{ n }}</li>
+    </div>
 
 </template>
 
@@ -8,7 +12,15 @@
       props:['attr'],
       data: function (){
         return {
-          counter: 0
+          counter: 0,
+          numbers: [ 1, 2, 3, 4, 5 ]
+        }
+      },
+      computed: {
+        evenNumbers: function () {
+          return this.numbers.filter(function (number) {
+            return number % 2 === 0
+          })
         }
       },
       methods: {
